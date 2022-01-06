@@ -1,10 +1,11 @@
-Curso de API REST con Laravel
-
-API EN LARAVEL POR VERSION V1-V2-V3-API PRIVADA
-
+## Curso de API REST con Laravel
+## API EN LARAVEL POR VERSION V1-V2-V3-API PRIVADA
 
 
-COMANDO DE STATUS DE MIGRACION
+## COMANDO DE STATUS DE MIGRACION
+```php
+migrate => "Ejecuta las migraciones de la base de datos"
+```
       migrate          Ejecuta las migraciones de la base de datos
       migrate:fresh    Elimina todas las tablas y vuelve a ejecutar todas las migraciones
       migrate:install  Crear el repositorio de migración
@@ -15,17 +16,20 @@ COMANDO DE STATUS DE MIGRACION
 
 
 ## Versión 1: planificación y configuración inicial
-<aside>
-🤖 php artisan make:controller Api/V1/PostController --api --model=Post
-</aside>
+🤖
+```php
+php artisan make:controller Api/V1/PostController --api --model=Post
+```
 
 ## Versión 1: recurso
 
 Cuando se construye una API, se puede necesitar una capa de transformación entre el Modelo Eloquent y la respuesta JSON.
 
 En esta capa de Recursos se pueden limitar la cantidad de campos del registro y mejorar la presentación de los mismos.
-💲 php artisan make:resource V1/PostResource
 
+```php
+php artisan make:resource V1/PostResource
+```
 
 ## Versión 2
 
@@ -33,20 +37,17 @@ Basicamente repetimos la configuracion inicial para crear una API
 
 creamos el controlador y los "recursos" para personalizar la salida.
 
-<aside>
-💲 php artisan make:controller Api/V2/PostController --api --model=Post
+```php
+php artisan make:controller Api/V2/PostController --api --model=Post
+```
 
-</aside>
+```php
+php artisan make:resource V2/PostResource
+```
 
-<aside>
-💲 php artisan make:resource V2/PostResource
-
-</aside>
-
-<aside>
-💲 php artisan make:resource V2/PostCollection
-
-</aside>
+```php
+php artisan make:resource V2/PostCollection
+```
 
 
 
@@ -57,8 +58,12 @@ creamos el controlador y los "recursos" para personalizar la salida.
 **Laravel Sanctum**
 
 instalamos el complemento con:
-💲 composer require laravel/sanctum
-💲 php artisan migrate
+```php
+composer require laravel/sanctum
+```
+```php
+php artisan migrate
+```
 
 para utilizar la api agregamos el header
 
@@ -74,6 +79,11 @@ curl http://localhost:8000/api/v2/posts/4 -H "Accept: application/json" -H "Auth
 
 
 
+
 --------------------------ISTALACION DE LIBRERIAS PARA SERVER---------------------------
-💲 composer install
-💲 php artisan migrate --seed
+```php
+composer install
+```
+```php
+php artisan migrate --seed
+```
