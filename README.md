@@ -3,9 +3,6 @@
 
 
 ## COMANDO DE STATUS DE MIGRACION
-```php
-migrate => "Ejecuta las migraciones de la base de datos"
-```
       migrate          Ejecuta las migraciones de la base de datos
       migrate:fresh    Elimina todas las tablas y vuelve a ejecutar todas las migraciones
       migrate:install  Crear el repositorio de migración
